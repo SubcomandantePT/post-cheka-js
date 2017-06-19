@@ -8,4 +8,4 @@ make sure one of the following userscript managers is installed in your browser:
 
 then install post cheka here:
 
-[install](#)
+[install](https://github.com/SubcomandantePT/post-cheka-js/raw/master/Reddit_Post_Cheka.user.js)
