@@ -4,7 +4,7 @@
 // @include     https://www.reddit.com/*
 // @updateURL	https://github.com/SubcomandantePT/post-cheka-js/raw/master/Reddit_Post_Cheka.meta.js
 // @downloadURL	https://github.com/SubcomandantePT/post-cheka-js/raw/master/Reddit_Post_Cheka.user.js
-// @version     1.0.1
+// @version     1.0.2
 // @grant       none
 // ==/UserScript==
 
@@ -113,8 +113,9 @@ function PostCheka($){
 	// initialize html and css
 	function init_html(){
 		// create [R] buttons next to usernames
-		var button = $("<a class='user-review-button tb-bracket-button' href='#' title='Review post history' style='margin-left:3px'>");
-		button.text("R");
+		var button = $("<a class='user-review-button tb-bracket-button' href='#' title='Review post history' style='margin-left:3px'>R</a>");
+		if (button.is("div")) button = $(button.get(1)); // fix for a weird bug where <a> gets wrapped in a <div>
+		
 		$(".tagline .author").each(function(){
 			var user = $(this).text().trim();
 			if (!user || user == "[deleted]") return;
