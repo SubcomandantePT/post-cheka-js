@@ -85,7 +85,7 @@ BLACKLIST = [
 	"degenera(cy|te)",
 	"multicultural(ist|ism)",
 	"cultural marx(ist|ism)",
-	"autis(tic|ism|t)",
+	"autis(tic|m|t)",
 ];
 
 //jQuery.noConflict()
