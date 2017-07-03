@@ -82,7 +82,7 @@ BLACKLIST = [
 	"\\bbeta\\b",
 	"biodiversity",
 	"misandr(ist|y)",
-	"degenerate",
+	"degenera(cy|te)",
 	"multicultural(ist|ism)",
 	"cultural marx(ist|ism)",
 	"autis(tic|ism|t)",
