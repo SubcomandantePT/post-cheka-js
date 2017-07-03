@@ -4,7 +4,7 @@
 // @include     https://www.reddit.com/*
 // @updateURL	https://github.com/SubcomandantePT/post-cheka-js/raw/master/Reddit_Post_Cheka.meta.js
 // @downloadURL	https://github.com/SubcomandantePT/post-cheka-js/raw/master/Reddit_Post_Cheka.user.js
-// @version     1.0.2
+// @version     1.0.3
 // @grant       none
 // ==/UserScript==
 
@@ -32,6 +32,7 @@ BLACKLIST = [
 	"jewe?y",
 	"jewed",
 	"\\bg(ip|yp)\\b",
+	"race mixing",
 	
 	"cunts?",
 	"bitch(es|ing|y)?",
@@ -62,7 +63,7 @@ BLACKLIST = [
 	"dumbies",
 	"\\bspergs?\\b",
 	
-	"tank(y|ies)",
+	"\\btank(y|ies)",
 	"stalin(ite|ism|ist)",
 	
 	"\\bre{3,}\\b",
@@ -77,6 +78,14 @@ BLACKLIST = [
 	"(deus|desu) vult",
 	"triggered",
 	"cuck",
+	"two gender",
+	"\\bbeta\\b",
+	"biodiversity",
+	"misandr(ist|y)",
+	"degenerate",
+	"multicultural(ist|ism)",
+	"cultural marx(ist|ism)",
+	"autis(tic|ism|t)",
 ];
 
 //jQuery.noConflict()
