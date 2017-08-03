@@ -4,7 +4,7 @@
 // @include     https://www.reddit.com/*
 // @updateURL	https://github.com/SubcomandantePT/post-cheka-js/raw/master/Reddit_Post_Cheka.meta.js
 // @downloadURL	https://github.com/SubcomandantePT/post-cheka-js/raw/master/Reddit_Post_Cheka.user.js
-// @version     1.0.3
+// @version     1.0.4
 // @grant       none
 // ==/UserScript==
 
@@ -45,6 +45,7 @@ BLACKLIST = [
 	"fagg?(s|ots?|y)?\\b",
 	"twats?",
 	"\\btrann?(y|ies?)",
+	"\\btraps?\\b",
 	
 	"craz(y|iest|ies)",
 	"insan(e|ity)",
@@ -86,6 +87,10 @@ BLACKLIST = [
 	"multicultural(ist|ism)",
 	"cultural marx(ist|ism)",
 	"autis(tic|m|t)",
+];
+
+BAD_SUBS = [
+	"shittankiessay",
 ];
 
 //jQuery.noConflict()
@@ -293,8 +298,19 @@ function ReviewWindow(core){
 					}
 				});
 				
-				// store match & add to window
+				// match bad subs
+				$.each(BAD_SUBS, function(ii, sub){
+					if (post.subreddit.toLowerCase() == sub.toLowerCase()){
+						has_match = true;
+						post.add_word("/r/"+sub);
+						user.add_word("/r/"+sub);
+						return false;
+					}
+				});
+				
 				if (!has_match) return;
+				
+				// store match & add to window
 				user.matches.push(post);
 				add_post(user, post);
 			});
