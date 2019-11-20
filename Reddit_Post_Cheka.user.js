@@ -128,7 +128,7 @@ function PostCheka($){
 	// initialize html and css
 	function init_html(){
 		// create [R] buttons next to usernames
-		var button = $("<a class='user-review-button tb-bracket-button' href='#' title='Review post history' style='margin-left:3px'>R</a>");
+		var button = $("<a class='user-review-button' href='#' title='Review post history' style='margin-left:3px'>|Check for slurs|</a>");
 		if (button.is("div")) button = $(button.get(1)); // fix for a weird bug where <a> gets wrapped in a <div>
 		
 		$(".tagline .author").each(function(){
